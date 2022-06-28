@@ -12,10 +12,18 @@
 </head>
 <body>
     <div>
+    <h1>Today is</h1>
+    <h2 id="date"> </h2>
     <h1> Will Austin Have a Good Day?</h1>
     <button onclick="show()" >Click Here</button>
    
     <script>
+        n = new Date();
+        y = n.getFullYear();
+        m = n.getMonth();
+        d = n.getDate();
+        document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+        
         function show() {
             let image = document.getElementById("image");
             image.src = "https://i.gifer.com/QYyA.gif"
